@@ -34,13 +34,12 @@ public class DriverClass {
 			Parsing swing = new Parsing();
 			Scanner input = new Scanner(swingFile);
 
-			// alist of JFrames array list ( check if name matches .add and convert)
-
+			// now loop to check the tokens passed from the user's file.
 			while(input.hasNext()) {
 
 				boolean isGridPane = false;
 
-				// its a single word ( token)
+				// its a single word (token)
 				String token = input.next(); // just one thing at a time gets read in the loop JFrame then frame ....
 			
 				// create the pattern for recognizing the pattern (the comment by //) now create a match with tokens object
@@ -95,7 +94,6 @@ public class DriverClass {
 					String temp = arry[arry.length-1].split("\\(")[1];
 					temp = temp.substring(0, temp.length()-2);
 
-					//System.out.println(temp);
 					if(temp.length()>0)
 						panels.add(new GPInformation(ref_panel)); // the panel reference is added into the object and current col and row are set 0,0 as coordinates
 
